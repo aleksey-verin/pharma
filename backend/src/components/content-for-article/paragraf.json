@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_content_for_article_paragraf",
+  "info": {
+    "displayName": "Параграф",
+    "icon": "layer"
+  },
+  "options": {},
+  "attributes": {
+    "content": {
+      "type": "richtext"
+    }
+  }
+}

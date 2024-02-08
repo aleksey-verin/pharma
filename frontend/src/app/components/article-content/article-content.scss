@@ -1,0 +1,383 @@
+@import '@/app/styles/mixins.scss';
+@import '@/app/styles/variables.scss';
+
+.article-promo {
+  border-radius: 40px 40px 0 0;
+  background-color: $mint;
+  padding-top: 30px;
+  padding-bottom: 60px;
+  overflow: hidden;
+  z-index: 1;
+  position: relative;
+
+  background-image: url("/assets/img/article-page/promo-mask.png");
+  background-repeat: no-repeat;
+  background-size: 100% 105%;
+  background-position: 0 0;
+
+  margin-bottom: -30px;
+}
+
+.article-promo__container {
+  display: flex;
+  gap: 60px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.article-promo__image {
+  width: 497px;
+  height: 457px;
+  object-fit: cover;
+  border-radius: 30px;
+}
+
+.article-promo__text {
+  flex: 1 1 auto;
+}
+
+.article-promo__title {
+  text-align: left;
+  margin: 0;
+  font-size: 70px;
+  line-height: 95%;
+  letter-spacing: -1.2px;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+
+.article-promo__subtitle {
+  text-align: left;
+  margin: 0;
+  color: #2d1448;
+  font-family: PT Sans;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 135%;
+}
+
+.article-heading {
+  border-radius: 40px 40px 0 0;
+  background-color: #f2f3f9;
+  padding-top: 30px;
+  padding-bottom: 60px;
+  overflow: hidden;
+  z-index: 1;
+  position: relative;
+
+  h5 {
+    margin: 0;
+    color: #2d1448;
+    text-align: center;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 135%;
+  }
+
+  margin-bottom: -30px;
+}
+
+.article-content {
+  border-radius: 40px 40px 0 0;
+  background-color: #ffffff;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  overflow: hidden;
+  z-index: 1;
+  position: relative;
+
+  color: #2d1448;
+  text-align: left;
+
+  p {
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 135%;
+
+    margin-bottom: 20px;
+  }
+
+  h4 {
+      margin: 0;
+      margin-top: 40px;
+      font-size: 50px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 110%;
+  }
+
+  h5 {
+      margin: 0;
+      margin-top: 20px;
+      font-size: 28px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 110%;
+  }
+
+  ul,
+  ol {
+    font-size: 18px;
+    padding-left: 25px;
+  }
+
+  li {
+    margin-block-start: 10px;
+  }
+
+  a {
+    color: #9060c3;
+    text-decoration: underline;
+  }
+
+  margin-bottom: -30px;
+
+  &.narrow {
+    .text-container {
+      max-width: 800px;
+    }
+  }
+
+  &.wide {
+    .text-container {
+      max-width: 840px;
+    }
+  }
+}
+
+.text-container {
+  width: 100%;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin: 0 auto;
+}
+
+.image-container {
+  margin-top: 50px;
+  margin-bottom: 30px;
+
+  border-radius: 10px;
+  overflow: hidden;
+
+  & img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+}
+
+.image-block {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  width: 100%;
+
+  margin: 50px auto;
+  max-width: 800px;
+
+  overflow: hidden;
+
+  & div {
+    flex: 0 1 50%;
+    height: 500px;
+    border-radius: 10px;
+  }
+
+  & img {
+    // width: 100%;
+    // height: 500px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+}
+
+.list-books {
+  // padding-left: 33px !important;
+
+  overflow: hidden;
+  position: relative;
+
+  height: 230px;
+  margin-bottom: 30px;
+
+  &::after {
+    content: "";
+    text-align: right;
+    position: absolute;
+    bottom: 0px;
+    right: 0;
+    width: 100%;
+    height: 60px;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0), white 100%);
+    pointer-events: none;
+  }
+
+  &.open {
+    height: auto;
+    &::after {
+      background: none;
+    }
+  }
+  // -webkit-line-clamp: 9; /* Число отображаемых строк */
+  // display: -webkit-box; /* Включаем флексбоксы */
+  // -webkit-box-orient: vertical; /* Вертикальная ориентация */
+  // overflow: hidden; /* Обрезаем всё за пределами блока */
+}
+
+.toggle-book-list {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+
+  color: #9060c3;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 135%;
+
+  &:hover {
+    color: #8740d4;
+  }
+}
+
+@media (max-width: $desktop) {
+  .article-promo {
+    padding-top: 50px;
+    padding-bottom: 60px;
+  }
+
+  .article-promo__container {
+    gap: 30px;
+    flex-direction: column-reverse;
+  }
+
+  .article-promo__image {
+    width: 100%;
+  }
+
+  .article-heading {
+    padding-top: 20px;
+    padding-bottom: 50px;
+
+    h5 {
+      font-size: 20px;
+    }
+  }
+
+  .article-content {
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+    p {
+      font-size: 16px;
+      margin-bottom: 15px;
+    }
+
+    h4 {
+        margin-top: 20px;
+        font-size: 35px;
+    }
+
+    h5 {
+        margin-top: 10px;
+        font-size: 20px;
+    }
+
+    ul,
+    ol {
+      font-size: 16px;
+    }
+  }
+
+  .image-container {
+    margin-top: 30px;
+    margin-bottom: 20px;
+  }
+
+  .image-block {
+    gap: 10px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+
+    & div {
+      flex: 0 1 50%;
+    }
+  }
+}
+
+@media (max-width: $tablet) {
+  .article-promo {
+    padding-top: 30px;
+  }
+
+  .article-promo__image {
+    flex: 0 0 320px;
+  }
+
+  .article-promo__title {
+    font-size: 36px;
+  }
+
+  .article-promo__subtitle {
+    font-size: 16px;
+  }
+
+  .article-heading {
+    h5 {
+      font-size: 18px;
+    }
+  }
+
+  .article-content {
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    p {
+      font-size: 14px;
+      line-height: 135%;
+
+      margin-bottom: 10px;
+    }
+
+    ul,
+    ol {
+      font-size: 14px;
+      padding-left: 15px;
+    }
+
+    li {
+      margin-block-start: 2px;
+    }
+  }
+
+  .text-container {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .image-container {
+    margin-top: 20px;
+    margin-bottom: 15px;
+    padding: 0;
+  }
+
+  .image-block {
+    gap: 10px;
+
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+    & div {
+      flex: 0 1 50%;
+      height: 200px;
+    }
+
+    & img {
+      height: 200px;
+    }
+  }
+}

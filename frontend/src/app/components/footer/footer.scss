@@ -1,0 +1,209 @@
+@import '@/app/styles/mixins.scss';
+@import '@/app/styles/variables.scss';
+
+.footer {
+    padding: 48px 0 57px; 
+    border-radius: 40px 40px 0 0;
+    background-color: #F2F3F9;
+
+    position: relative;
+    z-index: 1;
+}
+
+.footer__disclaimer {
+    width: 100%;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    img {
+        width: 100%;
+        height: 56px;
+        display: block;
+        object-fit: cover;
+        padding-left: 5px;
+    }
+}
+
+.footer__top {
+    display: flex;
+    padding-top: 45px;
+    padding-bottom: 28px;
+    justify-content: space-between;
+}
+
+.footer__logo-acnenet {
+    display: block;
+    padding-left: 5px;
+    img {
+        width: 93px;
+        height: 26px;
+    }
+}
+
+.footer__bottom {
+    display: flex;
+    margin-bottom: 58px;
+}
+
+.footer__nav {
+    display: flex;
+    gap: 52px;
+}
+
+.footer__link {
+    font-size: 12px;
+    line-height: 27px;
+    color: $violet;
+    opacity: 1;
+    transition: 0.3s all ease-in-out;
+    &:hover {
+        opacity: 0.6;
+    }
+}
+
+.footer__logo-galderma {
+    display: block;
+    width: 142px;
+    height: 33px;
+    margin-right: 237px;
+}
+
+.footer__text {
+    margin: 0;
+    font-size: 12px;
+    line-height: 12px;
+    color: $violet;
+    margin-bottom: 5px;
+}
+
+.footer__sources {
+    padding-left: 4px;
+    max-width: 966px;
+}
+
+.footer__sources p {
+    margin: 0;
+    color: rgba($color: $gray, $alpha: 0.5);
+    font-size: 12px;
+    line-height: 18px;
+
+    a {
+        text-decoration: underline;
+    }
+}
+
+@media(max-width: $desktop) {
+    .footer {
+        padding: 49px 0 63px; 
+    }
+
+    .footer__disclaimer {
+        padding-bottom: 10px;
+        img {
+            height: 34px;
+        }
+    }
+
+    .footer__top {
+        padding-top: 32px;
+        padding-bottom: 12px;
+    }
+
+
+    .footer__nav {
+        gap: 10px;
+    }
+
+    .footer__link {
+        font-size: 11px;
+        line-height: 22px;
+    }
+
+    .footer__logo-galderma{
+        width: 112px;
+        height: 26px;
+        margin-right: 35px;
+    }
+
+    .footer__info {
+        display: flex;
+    }
+    
+    .footer__text {
+        margin: 0;
+        margin: 0;
+        font-size: 11px;
+        line-height: 24px;
+        margin-right: 86px;
+    }
+
+    .footer__bottom {
+        margin-bottom: 34px;
+    }
+
+    .footer__sources p {
+        font-size: 10px;
+        line-height: 14px;
+    }
+}
+
+
+@media(max-width: $tablet) {
+    .footer {
+        padding: 30px 0 62px; 
+        border-radius: 24px 24px 0 0;
+    }
+
+    .footer__disclaimer {
+        padding-bottom: 13px;
+        padding-left: 0;
+        img {
+            height: 117px;
+        }
+    }
+
+    .footer__top {
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 28px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    }
+
+    .footer__logo-acnenet {
+        padding-left: 0;
+        margin-bottom: 8px;
+    }
+
+    .footer__nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .footer__link {
+        line-height: 15px;
+    }
+
+    .footer__bottom {
+        flex-direction: column;
+        align-items: center;
+        padding-top: 28px;
+        margin-bottom: 39px;
+    }
+
+    .footer__logo-galderma {
+        margin-right: 0;
+        width: 142px;
+        height: 33px;
+        margin-bottom: 8px;
+    }
+
+    .footer__info {
+        width: 175px;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .footer__text {
+        margin-right: 0;
+    }
+}

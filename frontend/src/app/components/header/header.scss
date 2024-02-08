@@ -1,0 +1,225 @@
+@import '@/app/styles/mixins.scss';
+@import '@/app/styles/variables.scss';
+
+.header {
+  height: 73px;
+}
+
+.header__container {
+  height: 73px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header__logo {
+  display: inline-block;
+  width: 93px;
+  height: 30px; 
+
+  img {
+     width: 93px;
+     height: 30px; 
+  }
+}
+
+.header__burger {
+  display: none;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+}
+
+.nav__list {
+  display: flex;
+  @include list-reset;
+  // margin-right: 68px;
+}
+
+.nav__item {
+  padding: 29px;
+
+  .nav__link {
+      font-size: 14px;
+      line-height: 18px;
+      opacity: 1;
+      transition: all 0.3s ease-in-out;
+
+      &:hover,
+      &:active {
+          opacity: 0.7;
+      }
+  }
+
+  &:last-child {
+      padding-right: 0;
+  }
+}
+
+.nav__buttom {
+  @include btn-reset;
+  border: 1px solid $violet;
+  border-radius: 3px;
+  font-size: 14px;
+  line-height: 18px;
+  padding: 12px 36px;
+  opacity: 1;
+  transition: all 0.3s ease-in-out;
+
+  &:hover,
+  &:active {
+      opacity: 0.7; 
+  }
+}
+
+@media(max-width: $desktop) {
+  .header {
+      height: 73px;
+  }
+  
+  .header__container {
+      height: 64px;
+  }
+
+  .nav__item {
+      padding: 15px; 
+
+      .nav__link {
+          font-size: 12px;
+          line-height: 16px;
+      }
+  }
+
+  .nav__buttom {
+      padding: 10px 30px;
+      font-size: 12px;
+      line-height: 16px;
+  }
+}
+
+@media(max-width: $tablet) {
+  .header {
+      height: 46px;
+  }
+  
+  .header__container {
+      height: 46px;
+      position: relative;
+  }
+
+  .header__logo {
+      display: flex;
+      align-items: center;
+      height: 46px;
+
+      img {
+          width: 65px;
+          height: 18px;
+      }
+  }
+
+  .nav {
+      display: none;
+  }
+
+  .header__burger {
+      display: block;
+      @include btn-reset;
+      padding: 17px 0 17px 17px;
+
+      span {
+          position: relative;
+          display: block;
+          width: 25px;
+          height: 1px;
+          background: $violet;
+          &::after {
+              content: "";
+              position: absolute;
+              width: 25px;
+              height: 1px;
+              background: $violet;
+              top: -6px;
+              left: 0;
+          }
+          &:before {
+              content: "";
+              position: absolute;
+              width: 25px;
+              height: 1px;
+              background: $violet;
+              top: 6px;
+              left: 0;
+          }
+      }
+  }
+
+  .header--open {
+      position: fixed;
+      height: auto;
+      z-index: 10;
+      background-color: $white;
+      width: 100%;
+      border-radius: 0 0 24px 24px;
+      .header__container {
+          height: 100%;
+          flex-direction: column;
+          align-items: flex-start;
+      }
+
+      .nav {
+          display: flex;
+          flex-direction: column;
+          width: 100%;
+          align-items: center;
+      }
+
+      .nav__list {
+          flex-direction: column;
+          align-items: center;
+          padding-top: 15px;
+          padding-bottom: 55px;
+          margin-right: 0;
+      }
+
+      .nav__item {
+          padding: 15px;
+
+          .nav__link {
+              font-size: 16px;
+              font-weight: 700;
+          }
+      }
+
+      .nav__buttom {
+          display: none;
+      }
+
+      .header__burger {
+          position: absolute;
+          right: 10px;
+          top: 0;
+
+          span {
+              width: 13px;
+              height: 0;
+              &::before {
+                  left: -13px;
+                  transform: rotate(45deg);
+                  top: 0px;
+                  width: 19px;
+                  transition: top 0.2s ease, transform 0.2s ease 0.2s;
+                }
+                &::after {
+                  left: -13px;
+                  transform: rotate(-45deg);
+                  top: 0px;
+                  width: 19px;
+                  transition: bottom 0.2s ease, transform 0.2s ease 0.2s;
+              }
+          }
+      }
+  }
+}

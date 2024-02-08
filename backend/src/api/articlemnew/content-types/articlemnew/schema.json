@@ -1,0 +1,45 @@
+{
+  "kind": "collectionType",
+  "collectionName": "articlemnews",
+  "info": {
+    "singularName": "articlemnew",
+    "pluralName": "articlemnews",
+    "displayName": "article",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Title": {
+      "type": "string",
+      "required": true
+    },
+    "Description": {
+      "type": "richtext",
+      "required": true
+    },
+    "Subtitle": {
+      "type": "richtext",
+      "required": true
+    },
+    "Content": {
+      "type": "dynamiczone",
+      "components": [
+        "content-for-article.bolshoe-izobrazhenie",
+        "content-for-article.dva-izobrazheniya",
+        "content-for-article.paragraf",
+        "content-for-article.spisok-literatury"
+      ]
+    },
+    "ImageBlock": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    }
+  }
+}

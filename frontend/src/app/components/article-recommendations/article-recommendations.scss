@@ -1,0 +1,228 @@
+@import '@/app/styles/mixins.scss';
+@import '@/app/styles/variables.scss';
+
+.article-recommendation {
+  padding: 50px 0 100px;
+  background: $mint;
+  border-radius: 28px 28px 0 0;
+  overflow: hidden;
+  position: relative;
+
+  margin-top: 50px;
+    margin-bottom: -30px;
+
+  &::before {
+      position: absolute;
+      content: '';
+      width: 717px;
+      height: 717px;
+      background-image: url("/assets/img/therapy-element-1.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      top: -30%;
+      left: -13%;
+  }
+  &::after {
+      position: absolute;
+      content: '';
+      width: 717px;
+      height: 717px;
+      background-image: url("/assets/img/therapy-element-2.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      top: 63%;
+      right: -12%;
+  }
+}
+
+.article-recommendation__container {
+  // padding: 0 0 112px 75px;
+}
+
+.article-recommendation__swiper {
+  // padding: 240px 0 0;
+  position: relative;
+  overflow: visible !important;
+  // min-width: 1415px;
+  z-index: 2;
+}
+
+.article-recommendation__wrapper {
+  // margin-left: -526px;
+
+}
+
+.article-recommendation__header {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.article-recommendation__title {
+  // position: absolute;
+  // top: 99px;
+  margin: 0;
+  font-weight: 700;
+  font-size: 50px;
+  line-height: 65px;
+}
+
+.article-recommendation__wrapper-arrow {
+  display: flex;
+  justify-content: space-between;
+  // right: 20%;
+  // position: absolute;
+  // top: 110px;
+  width: 88px;
+  z-index: 1;
+}
+
+.article-recommendation__slide {
+  height: 622px !important;
+  width: 267px;
+  display: flex;
+  flex-direction: column;
+  background: $white;
+  border-radius: 10px;
+  box-sizing: border-box;
+  // padding: 29px 17px  53px 35px;
+}
+
+.article-recommendation__link {
+  display: block;
+  padding: 30px;
+}
+
+.article-recommendation__caption {
+  margin: 0;
+  font-weight: 700;
+  font-size: 34px;
+  line-height: 36px;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+  word-wrap: break-word;
+}
+
+.article-recommendation__caption {
+    margin-bottom: 20px;
+    br {
+        display: none;
+    }
+}
+
+.article-recommendation__description {
+    display: block;
+    font-size: 18px;
+    line-height: 135%;
+    margin: 0 0 30px 0;
+    flex: 1 0 auto;
+    height: 175px;
+    overflow: hidden;
+}
+
+.article-recommendation__image {
+  width: 301px;
+  height: 300px;
+    img {
+      border-radius: 10px;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    
+}
+
+
+
+
+.article-recommendation__arrow-prev,
+.article-recommendation__arrow-next {
+ opacity: 1;
+ transition: opacity 0.3s ease-in-out;
+ cursor: pointer;
+ border: 1px solid #2D1448;
+ border-radius: 0 5px 5px 0;
+ display: flex;
+ padding: 12px 16px 13px 13px;
+ svg {
+      width: 14px;
+      height: 19px;
+ }
+
+ &:hover,
+ &:active {
+  opacity: 0.6;
+ }
+}
+
+.article-recommendation__wrapper-arrow .swiper-button-disabled {
+  svg {
+      opacity: 0.3;
+  }
+}
+
+.article-recommendation__arrow-prev {
+  border-radius: 5px 0 0 5px;
+  border-right: none;
+}
+
+@media(max-width: $desktop) {
+
+    .article-recommendation__container {
+        padding: 0 30px;
+    }
+  .article-recommendation__swiper {
+      padding: 158px 0 89px;
+  }
+
+  .article-recommendation__title {
+      top: 50px;
+      font-size: 40px;
+  }
+
+  .article-recommendation__wrapper-arrow {
+      right: 50%;
+      top: 63px;
+  }
+}
+
+@media(max-width: $tablet) {
+
+.article-recommendation__wrapper {
+    margin-left: -568px;
+  }
+
+.article-recommendation__swiper .swiper-slide {
+    width: 280px;
+    padding: 15px;
+  }
+
+  .article-recommendation__title {
+      font-size: 32px;
+      text-align: center;
+      line-height: 106%;
+      padding-right: 20px;
+      top: 56px;
+      max-width: 320px;
+  }
+
+  .article-recommendation__description {
+      font-size: 18px;
+    margin: 0 0 15px 0;
+
+  }
+
+  .article-recommendation__caption {
+      font-size: 22px;
+      margin-bottom: 10px;
+      line-height: 24px;
+  }
+
+  .article-recommendation__slide {
+    height: 560px;
+    }
+}

@@ -1,0 +1,130 @@
+@import '@/app/styles/mixins.scss';
+@import '@/app/styles/variables.scss';
+
+html,
+body {
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+body {
+  min-width: 320px;
+  margin: 0;
+  padding: 0;
+  font-family: "PT Sans", Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  color: $violet;
+  background-color: $white;
+  overflow-x: hidden;
+
+}
+// @media (prefers-reduced-motion: no-preference) {
+//   html {
+//     scroll-behavior: smooth;
+//   }
+// }
+
+.no-scroll {
+  overflow: hidden;
+  height: 100%;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+html.lenis {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+} 
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.container {
+  max-width: $desktop + 1;
+  width: 100%;
+  padding-left: 75px;
+  padding-right: 75px;
+  margin: 0 auto;
+}
+
+sup {
+  font-size: 13px;
+}
+
+.vertical-scroll {
+  min-height: 100vh;
+  z-index: 1;
+  position: relative;
+}
+
+.horizontal-scroll {
+  // max-height: 530px;
+  z-index: 1;
+  position: relative;
+  // overflow:hidden;
+}
+
+@media(max-width:  $desktop) {
+  .container {
+    max-width: $tablet + 1;
+    padding: 0 40px;
+  }
+  sup {
+    font-size: 11px;
+  }
+}
+
+@media(max-width: $tablet) {
+  .container{
+    width: 100%;
+    max-width: 320px;
+    padding: 0 20px;
+  }
+  sup {
+    font-size: 10px;
+    top: -5px;
+  }
+}
+

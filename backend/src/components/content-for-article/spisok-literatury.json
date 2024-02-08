@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_content_for_article_spisok_literatury",
+  "info": {
+    "displayName": "Список литературы",
+    "icon": "bulletList",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string",
+      "default": "Список литературы:"
+    },
+    "Content": {
+      "type": "richtext"
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_content_for_article_bolshoe_izobrazhenie",
+  "info": {
+    "displayName": "Большое изображение",
+    "icon": "picture",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    }
+  }
+}
