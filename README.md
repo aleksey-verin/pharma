@@ -1,4 +1,4 @@
-Установка:
+#### Установка:
 - для установки используем yarn
     - проверяем установлен ли yarn `yarn --version`
     - если нет, то устанавливаем `npm install --global yarn`
@@ -20,8 +20,9 @@ yarn install
 cd ..
 yarn dev
 ```
-Админка для бекенда: http://localhost:1337/admin
+Frontend: http://localhost:3000 (если порт не занят)
 
-логи для входа: verevaa@gmail.com Secret123
+Backend (admin): http://localhost:1337/admin
 
-Фронтенд: http://localhost:3000 (если порт не занят)
+Логи для входа: verevaa@gmail.com Secret123
+
