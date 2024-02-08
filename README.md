@@ -4,6 +4,7 @@
 - если не установлен, то выполняем `npm install --global yarn`
 
 ```bash
+git clone git@github.com:aleksey-verin/pharma.git
 cd pharma
 yarn install
 cd backend
