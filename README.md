@@ -6,7 +6,7 @@
 - перейти в папку `cd pharma` и установите общие зависимости `yarn install` или `yarn`
 - перейдите в папку backend `cd backend` и установите зависимости `yarn install` или `yarn`
 - вернитесь в pharma `cd ..` и перейдите в папку frontend `cd frontend` и установите зависимости `yarn install` или `yarn`
-- вернитесь в pharma и запустите dev режим `yarn dev`
+- вернитесь в pharma `cd ..` и запустите dev режим `yarn dev`
 
 Все команды в одном месте для многострочных терминалов
 ```bash
